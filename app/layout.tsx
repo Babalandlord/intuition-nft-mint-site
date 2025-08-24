@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   title: "NFT Minting Platform",
   description: "Modern NFT minting website with wallet integration",
   generator: "v0.app",
+  // Enhanced viewport configuration for optimal mobile experience
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false, // Prevent zoom on mobile forms
+  },
 }
 
 export default function RootLayout({
@@ -29,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${openSans.variable} antialiased`}>
+    <html lang="en" className={`${montserrat.variable} ${openSans.variable} antialiased dark`}>
       <body>{children}</body>
     </html>
   )
